@@ -1,0 +1,27 @@
+{
+  "name": "sg-utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/sg-utils.min.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sugdove/sg-utils.git"
+  },
+  "keywords": [],
+  "author": "sg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sugdove/sg-utils/issues"
+  },
+  "homepage": "https://github.com/sugdove/sg-utils#readme",
+  "devDependencies": {
+    "webpack": "^5.28.0",
+    "webpack-cli": "^4.6.0"
+  }
+}
