@@ -1,13 +1,13 @@
 {
-  "name": "sg-utils",
+  "name": "sg-2021-utils",
   "version": "1.0.0",
-  "description": "",
+  "description": "javascript自制工具类",
   "main": "dist/sg-utils.min.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
