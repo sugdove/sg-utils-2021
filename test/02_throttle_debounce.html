@@ -1,0 +1,43 @@
+<html>
+
+<body>
+  <button id="throttle">按钮节流</button>
+  <button id="debounce">按钮防抖</button>
+</body>
+<script>
+  function throttle(callback, delay) {
+    let pre = 0
+    return function (event) { // return的是handleClick事件 event为点击事件的参数 this为触发事件的button
+      let current = Date.now()
+      if (current - pre > delay) {
+        callback.call(this, event)
+        pre = current
+      }
+    }
+  }
+
+  function debounce(callback, delay) {
+    // let timeId = null
+    return function (event) {
+      // if(timeId)clearTimeout(timeId)
+      // timeId = setTimeout(callback.bind(this,event),delay)
+      if (callback.hasOwnProperty('timeout')) {
+        clearTimeout(callback.timeout)
+      }
+      callback.timeout = setTimeout(() => {
+        callback.call(this, event)
+        delete callback.timeout
+      }, delay)
+    }
+  }
+
+  function handleClick(event) {
+    console.log('点击按钮', this, event)
+  }
+
+  document.getElementById("throttle").onclick = throttle(handleClick, 500)
+
+  document.getElementById("debounce").onclick = debounce(handleClick, 2000)
+</script>
+
+</html>

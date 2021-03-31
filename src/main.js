@@ -1,0 +1,6 @@
+export { call } from './function/call'
+export { bind } from './function/bind'
+export { apply } from './function/apply'
+export { debounce } from './function/debounce'
+export { throttle } from './function/throttle'
+export { map, reduce, filter, find, findIndex, every, some } from './array/declare'
