@@ -1,17 +1,15 @@
 {
-  "name": "sg-2021-utils",
-  "version": "1.0.0",
+  "name": "sg-utils-2021",
+  "version": "1.0.1",
   "description": "javascript自制工具类",
-  "main": "dist/sg-utils.min.js",
-  "directories": {
-    "test": "test"
-  },
+  "main": "dist/sg-utils.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack --watch",
+    "dev": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sugdove/sg-utils.git"
+    "url": "https://github.com/sugdove/sg-utils.git"
   },
   "keywords": [],
   "author": "sg",
@@ -22,6 +20,7 @@
   "homepage": "https://github.com/sugdove/sg-utils#readme",
   "devDependencies": {
     "webpack": "^5.28.0",
-    "webpack-cli": "^4.6.0"
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
   }
 }
