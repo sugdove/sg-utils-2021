@@ -1,0 +1,32 @@
+<html>
+  
+<body>
+  <script src="../dist/sg-utils.js"></script>
+  <script>
+    /*
+      1.自定义new工具函数
+        语法: newInstance(Fn, ...args)
+        功能: 创建Fn构造函数的实例对象
+        实例: 创建空对象obj, 调用Fn指定this为obj, 返回obj
+      2.自定义instanceof工具函数
+        语法: myInstanceof(obj, Type)
+        功能: 判断obj是否是Type类型的实例
+        实例: Type的原型对象是否是obj的原型链上的某个对象, 如果是返回true, 否则返回false
+    */
+    function Person(name, age){
+      this.name = name
+      this.age = age
+      // return {}
+      // return []
+      // return function(){}
+      // return 1
+      // return undefined
+    }
+    const p = new Person('tom', 12)
+    console.log(p)
+    
+    const p2 = sgUtils.newInstance(Person, 'Jack', 13)
+    console.log(p2, p2.constructor)
+    </script>
+</body>
+</html>
