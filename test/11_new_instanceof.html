@@ -27,6 +27,11 @@
     
     const p2 = sgUtils.newInstance(Person, 'Jack', 13)
     console.log(p2, p2.constructor)
+
+    console.log(sgUtils.myInstanceof(p, Object))
+    console.log(sgUtils.myInstanceof(p, Person))
+    console.log(sgUtils.myInstanceof(sgUtils.myInstanceof, Function))
+    console.log(sgUtils.myInstanceof(p, String), sgUtils.myInstanceof(p, Function))
     </script>
 </body>
 </html>

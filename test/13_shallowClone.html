@@ -1,0 +1,25 @@
+<html>
+  
+<body>
+  <script src="../dist/sg-utils.js"></script>
+  <script>
+    /*
+    */
+     const obj1 = {
+        x: 'abc', 
+        y: {m: 1}
+     }
+
+     const obj2 = sgUtils.clone(obj1)
+     
+     console.log(obj2, obj1 === obj2, obj1.y === obj2.y)
+
+    //  
+     const arr1 = ['abc', {m: 1}]
+
+     const arr2 = sgUtils.clone(arr1)
+     
+     console.log(arr2, arr1 === arr2, arr1[1] === arr2[1])
+    </script>
+</body>
+</html>
