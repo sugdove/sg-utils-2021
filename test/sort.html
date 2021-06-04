@@ -1,0 +1,47 @@
+<html>
+  <script>
+    let arr = [1,6,2,7,3,9]
+    function maopao(arr){
+      for(let i = 0; i<arr.length -1; i++){
+        for(let j = 0; j<arr.length - 1 -i; j++){
+          if(arr[j] > arr[j+1]){
+            // let temp = arr[j]
+            // arr[j] = arr[j+1]
+            // arr[j+1] = temp
+            [arr[j+1] , arr[j]] = [arr[j],arr[j+1]]
+          }
+        }
+      }
+      return arr
+    }
+    console.log(maopao(arr),'maopao')
+    let arr2 = [2,6,1,7,3,9]
+    function charu(arr){
+      for(let i = 1; i<arr.length; i++){
+        // let isMin = false
+        // if(current <= arr[0]){
+        //   isMin = true
+        // }
+        // for(let j = i-1; j>=0; j--){
+        //   if(current < arr[j]){
+        //     arr[j+1] = arr[j]
+        //   }
+        //   else{
+        //     arr[j+1] = current
+        //     break;
+        //   }
+        // }
+        // if(isMin)arr[0] = current
+        let current = arr[i]
+        let j = i-1
+        while(arr[j] > current && j>=0){
+          arr[j+1] = arr[j]
+          j--
+        }
+        arr[j+1] = current
+      }
+      return arr
+    }
+    console.log(charu(arr2),'charu')
+  </script>
+</html>
