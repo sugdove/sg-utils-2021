@@ -4,18 +4,18 @@ export function apply(fn, obj, args) {
 
   //处理obj是undefined和null的情况
   if (obj === undefined || obj === null) {
-    obj = window;
+    obj = window
   }
 
   // 给obj添加方法tempFn
-  obj.tempFn = fn;
+  obj.tempFn = fn
 
   // 调用obj的tempFn方法 获取返回值result
-  const result = obj.tempFn(...args);
+  const result = obj.tempFn(...args)
 
   // 删除临时方法tempFn
-  delete obj.tempFn;
+  delete obj.tempFn
 
   // 返回返回值
-  return result;
-};
+  return result
+}
